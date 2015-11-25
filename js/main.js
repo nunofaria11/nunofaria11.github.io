@@ -91,26 +91,26 @@ ghApp.service('ghService', ['$http', '$q', '$log',
 ghApp.controller('ghController', ['$scope', 'ghService', 'ghData', '$timeout',
     function($scope, ghService, ghData, $timeout) {
         $scope.repoModel = {
-        	loading: false,
+            loading: false,
             repos: null
         };
-        $scope.init = function(){
-        	$scope.repoModel.loading = true;
-        	ghService.getRepos()
-            .then(
-                function(reposData) {
-                    if (reposData) {
-                        var i, repo, repos = [];
-                        for (i = 0; i < reposData.length; i++) {
-                            repo = ghData.convertToRepo(reposData[i]);
-                            repos.push(repo);
+        $scope.init = function() {
+            $scope.repoModel.loading = true;
+            ghService.getRepos()
+                .then(
+                    function(reposData) {
+                        if (reposData) {
+                            var i, repo, repos = [];
+                            for (i = 0; i < reposData.length; i++) {
+                                repo = ghData.convertToRepo(reposData[i]);
+                                repos.push(repo);
+                            }
+                            $scope.repoModel.repos = repos;
+                            $scope.repoModel.loading = false;
                         }
-                        $scope.repoModel.repos = repos;                      
-                        $scope.repoModel.loading = false;
-                    }
-                });
+                    });
         };
         $scope.init();
-        
+
     }
 ]);
