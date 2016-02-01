@@ -7,14 +7,14 @@ ghApp.service('ghData', [function() {
 
     return {
         convertToRepo: function(data) {
-            var r = new Repo(data.id);
-            r.url = data.html_url;
+            var r = new Repo(data);
+            /*r.url = data.html_url;
             r.name = data.name;
             r.language = data.language;
             r.description = data.description;
             r.createdDate = new Date(data.created_at);
             r.updatedDate = new Date(data.updated_at);
-            r.urls = [];
+            r.urls = [];*/
             URLS_KEYS.forEach(function(urlKey) {
                 var dataUrl = URLS_KEYS[urlKey];
                 if (dataUrl) {
