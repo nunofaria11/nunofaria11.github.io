@@ -24,9 +24,9 @@ a:visited {
 }
 
 .avatar.loading {
-    -webkit-animation: wow 2s infinite;
-    -o-animation: wow 2s infinite;
-    animation: wow 2s infinite;
+    -webkit-animation: wow 2s infinite linear;
+    -o-animation: wow 2s infinite linear;
+    animation: wow 2s infinite linear;
 }
 
 .repo {
