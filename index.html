@@ -4,13 +4,13 @@
 <head>
     <title>nunofaria11</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link href="st/pocketgrid.css" rel="stylesheet">
     <link href="st/st.css" rel="stylesheet">
 </head>
 
 <body ng-app="ghApp">
-    
     <script src="js/models.js"></script>
     <script src="js/main.js"></script>
     <script src="js/gh.js"></script>
@@ -27,7 +27,18 @@
         <div class="c block" ng-controller="soController as soCtrl" ng-include="'./views/so.html'"></div>
         <div class="r block">&nbsp;</div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+        <div class="block-group">
+            <div class="l block">&nbsp;</div>
+            <div class="c block">
+                <p>
+                    APIs used: <a href="https://developer.github.com/v3/" target="_blank">GitHub (v3)</a>, <a href="https://api.stackexchange.com" target="_blank">Stackoverflow (v2.2)</a>
+                </p>
+                <p>made by nunofaria</p>
+            </div>
+            <div class="r block">&nbsp;</div>
+        </div>
+    </div>
 </body>
 
 </html>

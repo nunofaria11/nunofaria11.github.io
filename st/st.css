@@ -8,18 +8,23 @@ h1 {
     color: white;
 }
 
-.title {}
+.title {
+    font-weight: bold;
+}
 
 #footer {
     clear: both;
     position: absolute;
     z-index: 10;
-    height: 200px;
     background-color: #d2d2d2;
     left: 0;
     right: 0;
     margin-top: 41px;
-    color: 
+    color: gray;
+}
+
+#footer a, #footer a:visited {
+    color: gray;
 }
 
 a:visited {

@@ -10,8 +10,15 @@
     <div class="title">Questions</div>
     <div ng-repeat="q in soModel.questions track by q.question_id" class="so-question">
         <a ng-href="{{q.link}}">
-		{{q.title}}
-		</a>
+            <span ng-bind="q.title"></span>
+        </a>
+        <span class="score">{{q.score}}</span>
+    </div>
+    <div class="title">Favorites</div>
+    <div ng-repeat="q in soModel.favorites track by q.question_id" class="so-question">
+        <a ng-href="{{q.link}}">
+            <span ng-bind="q.title"></span>
+        </a>
         <span class="score">{{q.score}}</span>
     </div>
 </div>
