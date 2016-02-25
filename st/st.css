@@ -10,6 +10,18 @@ h1 {
 
 .title {}
 
+#footer {
+    clear: both;
+    position: absolute;
+    z-index: 10;
+    height: 200px;
+    background-color: #d2d2d2;
+    left: 0;
+    right: 0;
+    margin-top: 41px;
+    color: 
+}
+
 a:visited {
     color: #3398ff;
 }
@@ -106,4 +118,26 @@ a:visited {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+.image-overlay-wrapper {
+    position: relative;
+}
+
+.image-overlay-wrapper .image-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.75;
+}
+
+.image-overlay-wrapper .image-overlay.image-overlay-gh {
+    background: transparent url(/images/gh.png) no-repeat;
+}
+
+.image-overlay-wrapper .image-overlay.image-overlay-so {
+    background: transparent url(/images/so.png) no-repeat;
 }

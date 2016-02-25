@@ -1,0 +1,17 @@
+<!-- content -->
+<div class="image-overlay-wrapper">
+    <img ng-src="{{trustResource(soModel.user.profile_image)}}" class="avatar" ng-class="{'loading': soModel.loading.user || soModel.loading.questions }" />
+    <!--<div class="image-overlay image-overlay-so"></div>-->
+</div>
+<h1 class="title"><a ng-href="{{::soModel.user.link}}">{{::soModel.user.display_name}}@stackoverflow</a></h1>
+<!-- TODO -->
+<div class="so-questions">
+    <!-- Questions -->
+    <div class="title">Questions</div>
+    <div ng-repeat="q in soModel.questions track by q.question_id" class="so-question">
+        <a ng-href="{{q.link}}">
+		{{q.title}}
+		</a>
+        <span class="score">{{q.score}}</span>
+    </div>
+</div>
