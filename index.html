@@ -15,16 +15,23 @@
     <script src="js/main.js"></script>
     <script src="js/gh.js"></script>
     <script src="js/so.js"></script>
+    <script src="js/tw.js"></script>
     <!-- GitHub -->
-    <div class="block-group">
+    <div class="block-group section">
         <div class="l block">&nbsp;</div>
         <div class="c block" ng-controller="ghController as ghCtrl" ng-include="'./views/gh.html'"></div>
         <div class="r block">&nbsp;</div>
     </div>
     <!-- Stackoverflow -->
-    <div class="block-group">
+    <div class="block-group section">
         <div class="l block">&nbsp;</div>
         <div class="c block" ng-controller="soController as soCtrl" ng-include="'./views/so.html'"></div>
+        <div class="r block">&nbsp;</div>
+    </div>
+    <!-- Twitter -->
+    <div class="block-group section">
+        <div class="l block">&nbsp;</div>
+        <div class="c block" ng-controller="twController as twCtrl" ng-include="'./views/tw.html'"></div>
         <div class="r block">&nbsp;</div>
     </div>
     <div id="footer">
@@ -32,7 +39,9 @@
             <div class="l block">&nbsp;</div>
             <div class="c block">
                 <p>
-                    APIs used: <a href="https://developer.github.com/v3/" target="_blank">GitHub (v3)</a>, <a href="https://api.stackexchange.com" target="_blank">Stackoverflow (v2.2)</a>
+                    APIs used: <a href="https://developer.github.com/v3/" target="_blank">GitHub (v3)</a>, 
+                    <a href="https://api.stackexchange.com" target="_blank">Stackoverflow (v2.2)</a>, 
+                    <a href="https://dev.twitter.com/rest/public" target="_blank">Twitter REST API (v1.1)</a>
                 </p>
                 <p>made by nunofaria</p>
             </div>

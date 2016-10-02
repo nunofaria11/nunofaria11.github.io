@@ -12,6 +12,10 @@ h1 {
     font-weight: bold;
 }
 
+.section {
+    margin: 20px auto;
+}
+
 #footer {
     clear: both;
     position: absolute;
