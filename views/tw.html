@@ -8,7 +8,7 @@
     <h1 class="title"><a ng-href="https://twitter.com/nunofaria11">nunofaria11@twitter</a></h1>
     <div>
         <p>
-        <div ng-show="!loading" class="table">
+        <div ng-show="!(twModel.loading.user || twModel.loading.favorites)" class="table">
             <div ng-repeat="tweet in twModel.favorites | orderBy: '-created_at' track by tweet.id"
                  class="table-row tweet">
                 <div class="table-cell link">
@@ -18,7 +18,7 @@
                       ng-bind="tweet.retweet_count + (tweet.retweet_count > 1 || tweet.retweet_count === 0 ? ' retweets' : ' retweet')"></span>
             </div>
         </div>
-        <div ng-show="loading">
+        <div ng-show="twModel.loading.user || twModel.loading.favorites">
             Waiting for free heroku 😀 check it out here <a href="https://github.com/nunofaria11/node-twitter-api"
                                                             target="_blank">nunofaria11/node-twitter-api</a> while
             you wait
