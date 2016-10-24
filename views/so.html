@@ -1,24 +1,35 @@
-<!-- content -->
-<div class="image-overlay-wrapper">
-    <img ng-src="{{trustResource(soModel.user.profile_image)}}" class="avatar" ng-class="{'loading': soModel.loading.user || soModel.loading.questions }" />
-    <!--<div class="image-overlay image-overlay-so"></div>-->
-</div>
-<h1 class="title"><a ng-href="{{::soModel.user.link}}">{{::soModel.user.display_name}}@stackoverflow</a></h1>
-<!-- TODO -->
-<div class="so-questions">
-    <!-- Questions -->
-    <div class="title">Questions</div>
-    <div ng-repeat="q in soModel.questions track by q.question_id" class="so-question">
-        <a target="_blank" ng-href="{{q.link}}">
-            <span ng-bind="q.title"></span>
-        </a>
-        <span class="score">{{q.score}}</span>
+<div class="wow-hover">
+    <!-- content -->
+    <div class="image-overlay-wrapper">
+        <img ng-src="{{trustResource(soModel.user.profile_image)}}" class="avatar"
+             ng-class="{'loading': soModel.loading.user || soModel.loading.questions }"/>
+        <!--<div class="image-overlay image-overlay-so"></div>-->
     </div>
-    <div class="title">Favorites</div>
-    <div ng-repeat="q in soModel.favorites track by q.question_id" class="so-question">
-        <a target="_blank" ng-href="{{q.link}}">
-            <span ng-bind="q.title"></span>
-        </a>
-        <span class="score">{{q.score}}</span>
+    <h1 class="title"><a ng-href="{{::soModel.user.link}}">{{::soModel.user.display_name}}@stackoverflow</a></h1>
+    <!-- TODO -->
+    <div class="so-questions">
+        <!-- Questions -->
+        <div class="title">Questions</div>
+        <div class="table">
+            <div ng-repeat="q in soModel.questions track by q.question_id" class="table-row so-question">
+                <div class="table-cell">
+                    <a target="_blank" ng-href="{{q.link}}">
+                        <span ng-bind="q.title"></span>
+                    </a>
+                </div>
+                <span class="table-cell score">Score&nbsp;{{q.score}}</span>
+            </div>
+        </div>
+        <div class="title">Favorites</div>
+        <div class="table">
+            <div ng-repeat="q in soModel.favorites track by q.question_id" class="table-row so-question">
+                <div class="table-cell">
+                    <a target="_blank" ng-href="{{q.link}}">
+                        <span ng-bind="q.title"></span>
+                    </a>
+                </div>
+                <span class="table-cell score">Score&nbsp;{{q.score}}</span>
+            </div>
+        </div>
     </div>
 </div>

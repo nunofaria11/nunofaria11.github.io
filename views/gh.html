@@ -1,18 +1,23 @@
-<div class="image-overlay-wrapper">
-    <img src="https://avatars.githubusercontent.com/nunofaria11" class="avatar" ng-class="{'loading': repoModel.loading}">
-    <!--<div class="image-overlay image-overlay-gh"></div>-->
-</div>
-<h1 class="title"><a href="https://github.com/nunofaria11">nunofaria11@github</a></h1>
-<div>
-    started out with java
-    <br> currently developing with javascript and angular
-    <br> becoming more focused on backend coolness
-    <p>
-        <div>
-            <div ng-repeat="repo in repoModel.repos | orderBy: '-updatedDate' track by repo.id" class="repo">
-                <a target="_blank" ng-href="{{repo.url}}">{{repo.name}}</a> |
-                <span class="desc" ng-bind="repo.description"></span>
+<div class="wow-hover">
+    <div class="image-overlay-wrapper">
+        <img src="https://avatars.githubusercontent.com/nunofaria11" class="avatar"
+             ng-class="{'loading': repoModel.loading}">
+        <!--<div class="image-overlay image-overlay-gh"></div>-->
+    </div>
+    <h1 class="title"><a href="https://github.com/nunofaria11">nunofaria11@github</a></h1>
+    <div>
+        started out with java
+        <br> currently developing with javascript and angular
+        <br> becoming more focused on backend coolness
+        <p>
+        <div class="table">
+            <div ng-repeat="repo in repoModel.repos | orderBy: '-updatedDate' track by repo.id" class="table-row repo">
+                <div class="table-cell">
+                    <a target="_blank" ng-href="{{repo.url}}">{{repo.name}}</a>
+                </div>
+                <span class="table-cell desc" ng-bind="repo.description"></span>
             </div>
         </div>
-    </p>
+        </p>
+    </div>
 </div>

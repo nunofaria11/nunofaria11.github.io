@@ -65,7 +65,7 @@ ghApp.service('soService', ['$http', '$q', '$log', 'ApiIds',
             var questionsArgs = {
                 site: 'stackoverflow',
                 pagesize: 10,
-                sort: 'activity',
+                sort: 'votes',
                 order: 'desc'
             };
             url = setArgs(url, questionsArgs);

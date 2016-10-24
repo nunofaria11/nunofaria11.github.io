@@ -1,152 +1,175 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    ;
-    background-color: #d9d9d9;
+  font-family: 'Open Sans', sans-serif;;
+  background-color: #d9d9d9;
 }
 
 h1 {
-    color: white;
+  color: white;
 }
 
 .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .section {
-    margin: 20px auto;
+  margin: 20px auto;
 }
 
 #footer {
-    clear: both;
-    position: absolute;
-    z-index: 10;
-    background-color: #d2d2d2;
-    left: 0;
-    right: 0;
-    margin-top: 41px;
-    color: gray;
+  clear: both;
+  position: absolute;
+  z-index: 10;
+  background-color: #d2d2d2;
+  left: 0;
+  right: 0;
+  margin-top: 41px;
+  color: gray;
 }
 
 #footer a, #footer a:visited {
-    color: gray;
+  color: gray;
 }
 
 a:visited {
-    color: #3398ff;
+  color: #3398ff;
 }
 
 .avatar {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .avatar.loading {
-    -webkit-animation: wow 2s infinite linear;
-    -o-animation: wow 2s infinite linear;
-    animation: wow 2s infinite linear;
+  -webkit-animation: wow 2s infinite linear;
+  -o-animation: wow 2s infinite linear;
+  animation: wow 2s infinite linear;
+}
+
+.wow-hover:hover .avatar {
+  -webkit-animation: wow 5s infinite ease-in-out;
+  -o-animation: wow 5s infinite ease-in-out;
+  animation: wow 5s infinite ease-in-out;
 }
 
 .repo {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .l,
 .r {
-    width: 25%;
-    height: 100%;
+  width: 25%;
+  height: 100%;
 }
 
 .c {
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
 }
-
 
 /* Chrome, Safari, Opera */
 
 @-webkit-keyframes wow {
-    0% {
-        -ms-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    25% {
-        -ms-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-    50% {
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-    75% {
-        -ms-transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        transform: rotate(270deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-
 
 /* Standard syntax */
 
 @keyframes wow {
-    0% {
-        -ms-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    25% {
-        -ms-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-    50% {
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-    75% {
-        -ms-transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        transform: rotate(270deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .image-overlay-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .image-overlay-wrapper .image-overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.75;
 }
 
 .image-overlay-wrapper .image-overlay.image-overlay-gh {
-    background: transparent url(/images/gh.png) no-repeat;
+  background: transparent url(/images/gh.png) no-repeat;
 }
 
 .image-overlay-wrapper .image-overlay.image-overlay-so {
-    background: transparent url(/images/so.png) no-repeat;
+  background: transparent url(/images/so.png) no-repeat;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table .table-row {
+  display: table-row;
+  border-bottom: white solid 3px;
+}
+
+.table .table-row:hover {
+  background-color: #ccc;
+}
+
+.table .table-row .table-cell {
+  display: table-cell;
+  padding: 5px;
+  vertical-align: middle;
 }
