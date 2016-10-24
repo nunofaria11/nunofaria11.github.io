@@ -1,16 +1,22 @@
 <!-- my favorite tweets -->
 <div class="image-overlay-wrapper">
-  <img ng-src="{{trustResource(twModel.user.profile_image)}}" class="avatar" ng-class="{'loading': twModel.loading.user || twModel.loading.favorites }" />
-  <!--<div class="image-overlay image-overlay-so"></div>-->
+    <img ng-src="{{trustResource(twModel.user.profile_image)}}" class="avatar"
+         ng-class="{'loading': twModel.loading.user || twModel.loading.favorites }"/>
+    <!--<div class="image-overlay image-overlay-so"></div>-->
 </div>
 <h1 class="title"><a ng-href="https://twitter.com/nunofaria11">nunofaria11@twitter</a></h1>
 <div>
-  <p>
-    <div>
-      <div ng-repeat="tweet in twModel.favorites | orderBy: '-created_at' track by tweet.id" class="tweet">
-        <a target="_blank" ng-href="{{'https://twitter.com/statuses/' + tweet.id_str}}">{{tweet.text}}</a> |
-        <span class="desc" ng-bind="tweet.retweet_count"></span>
-      </div>
+    <p>
+    <div ng-show="!loading">
+        <div ng-repeat="tweet in twModel.favorites | orderBy: '-created_at' track by tweet.id" class="tweet">
+            <a target="_blank" ng-href="{{'https://twitter.com/statuses/' + tweet.id_str}}">{{tweet.text}}</a> |
+            <span class="desc" ng-bind="tweet.retweet_count"></span>
+        </div>
     </div>
-  </p>
+    <div ng-show="loading">
+        Waiting for free heroku 😀 check it out here <a href="https://github.com/nunofaria11/node-twitter-api"
+                                                               target="_blank">nunofaria11/node-twitter-api</a> while
+        you wait
+    </div>
+    </p>
 </div>
