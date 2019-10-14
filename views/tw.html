@@ -12,7 +12,7 @@
             <div ng-repeat="tweet in twModel.favorites | orderBy: '-created_at' track by tweet.id"
                  class="table-row tweet">
                 <div class="table-cell link">
-                    <a target="_blank" ng-href="{{'https://twitter.com/statuses/' + tweet.id_str}}">{{tweet.text}}</a>
+                    <a target="_blank" ng-href="{{'https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str}}">{{tweet.text}}</a>
                 </div>
                 <span class="table-cell desc"
                       ng-bind="tweet.retweet_count + (tweet.retweet_count > 1 || tweet.retweet_count === 0 ? ' retweets' : ' retweet')"></span>
