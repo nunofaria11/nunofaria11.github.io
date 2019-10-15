@@ -11,7 +11,7 @@
         <br> becoming more focused on backend coolness
         <p>
         <div class="table">
-            <div ng-repeat="repo in repoModel.repos | orderBy: '-updatedDate' track by repo.id" class="table-row repo">
+            <div ng-repeat="repo in repoModel.repos | filter: { archived: false } | orderBy: '-updatedDate' track by repo.id" class="table-row repo">
                 <div class="table-cell">
                     <a target="_blank" ng-href="{{repo.url}}">{{repo.name}}</a>
                 </div>
