@@ -90,7 +90,7 @@ ghApp.controller('ghController', ['$scope', 'ghService', 'ghData', '$timeout',
                         if (reposData) {
                             var i, repo, repos = [];
                             for (i = 0; i < reposData.length; i++) {
-                                if (!repo.archived) {
+                                if (!reposData[i].archived) {
                                     repo = ghData.convertToRepo(reposData[i]);
                                     repos.push(repo);
                                 }
