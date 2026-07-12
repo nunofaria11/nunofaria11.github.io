@@ -1,8 +1,3 @@
-# Misc stuff
-... Mostly used to test API
+# nunofaria11.github.io
 
-# TODO
-- ~~GitHub API~~
-- ~~StackOverflow API~~
-- ~~Twitter API~~
-- Use requirejs
+Minimalist personal site. Static HTML, no frameworks, no scripts.
